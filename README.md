@@ -40,7 +40,7 @@ The core logic is handled by the `WaxCpuKeeper` class in `main.py`, which orches
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/wax-cpu-keeper.git
+    git clone https://github.com/alsekaram/wax-cpu-keeper
     cd wax-cpu-keeper
     ```
 
