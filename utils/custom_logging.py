@@ -2,7 +2,6 @@ import logging
 import colorlog
 
 
-
 def configure_color_logging(level=logging.WARNING):
     """
     Настраивает цветное логирование с добавлением кастомного уровня MINE.
@@ -21,7 +20,6 @@ def configure_color_logging(level=logging.WARNING):
             "WARNING": "yellow",
             "ERROR": "red",
             "CRITICAL": "bold_red",
-            "MINE": "blue",  # Добавляем цвет для уровня MINE
         },
     )
 
