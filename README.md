@@ -111,10 +111,10 @@ The core logic is handled by the `WaxCpuKeeper` class in `main.py`, which orches
 
 ### Usage
 
-To run the WAX CPU Keeper, execute the `main.py` script from your terminal:
+To run the WAX CPU Keeper, execute the `main.py` script from your terminal using `uv`:
 
 ```bash
-python main.py
+uv run python main.py
 ```
 
 *   If `MONITOR_MODE` is set to `"false"` (the default), the script will perform a one-time check and exit.
@@ -123,8 +123,8 @@ python main.py
 ### Run in one line
 
 ```bash
-# Monitoring mode every 2 minutes without редактирования .env
-MONITOR_MODE=true CHECK_INTERVAL=120 python main.py
+# Monitoring mode every 2 minutes without editing .env
+MONITOR_MODE=true CHECK_INTERVAL=120 uv run python main.py
 ```
 
 ### Environment variables reference
