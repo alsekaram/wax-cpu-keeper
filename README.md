@@ -63,33 +63,49 @@ The core logic is handled by the `WaxCpuKeeper` class in `main.py`, which orches
 
 ### Configuration
 
-Copy the `env.example` file to a new file named `.env` and add your specific values:
+1.  **Create the environment file**
 
-```env
-# WAX API endpoint
-WAX_API_ENDPOINT="https://wax.greymass.com"
+    Copy `env.example` to a new file named `.env`:
+    ```bash
+    cp env.example .env
+    ```
 
-# The account that will receive the CPU power-up
-RECEIVER_NAME="your_receiver_account"
+2.  **Set Secure Permissions (Crucial!)**
 
-# The account that will pay for the power-up transaction
-PAYER_NAME="your_payer_account"
+    To protect your private key, it is **critical** to restrict permissions on your `.env` file so that only your user account can read it.
+    ```bash
+    chmod 600 .env
+    ```
 
-# The active private key of the payer account
-PAYER_PRIVATE_KEY="your_payer_private_key"
+3.  **Edit the `.env` file**
 
-# Desired CPU stake in whole WAX tokens (e.g., 1000 => 1000.00000000 WAX)
-TARGET_CPU_STAKE="1000"
+    Open `.env` and fill in the required values:
 
-# Desired NET stake in whole WAX tokens (e.g., 1)
-TARGET_NET_STAKE="1"
+    ```env
+    # WAX API endpoint
+    WAX_API_ENDPOINT="https://wax.greymass.com"
 
-# Set to "true" to run in continuous monitoring mode
-MONITOR_MODE="false"
+    # The account that will receive the CPU power-up
+    RECEIVER_NAME="your_receiver_account"
 
-# Time in seconds between checks in monitoring mode (default: 300)
-CHECK_INTERVAL="300"
-```
+    # The account that will pay for the power-up transaction
+    PAYER_NAME="your_payer_account"
+
+    # The active private key of the payer account
+    PAYER_PRIVATE_KEY="your_payer_private_key"
+
+    # Desired CPU stake in whole WAX tokens (e.g., 1000 => 1000.00000000 WAX)
+    TARGET_CPU_STAKE="1000"
+
+    # Desired NET stake in whole WAX tokens (e.g., 1)
+    TARGET_NET_STAKE="1"
+
+    # Set to "true" to run in continuous monitoring mode
+    MONITOR_MODE="false"
+
+    # Time in seconds between checks in monitoring mode (default: 300)
+    CHECK_INTERVAL="300"
+    ```
 
 **Security Note**: Never commit your `.env` file to version control. Ensure it is listed in your `.gitignore` file.
 
